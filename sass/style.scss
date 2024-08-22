@@ -245,6 +245,13 @@ body {
 
 		&-item {
 			flex: 1;
+
+			.available-title {
+				opacity: 0.5;
+				color: #f70833;
+				margin-top: 0;
+				font-size: 1.17em;
+			}
 		}
 
 		.available-items {
@@ -283,6 +290,64 @@ body {
 			}
 
 			.available-title {
+				opacity: 0.5;
+				color: #f70833;
+				margin-top: 0;
+			}
+		}
+	}
+
+	.loayalty {
+		&-title {
+			margin: 0;
+			padding: 20px;
+			color: #fff;
+			border-radius: 10px;
+			font-size: 24px;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		&-item {
+			flex: 1;
+		}
+
+		.loayalty-items {
+			transition: all 0.3s ease;
+			flex-wrap: wrap;
+			gap: 20px;
+			display: flex;
+			justify-content: space-evenly;
+			background-color: #1e301e;
+			color: #fff;
+			padding: 20px;
+			border-radius: 30px;
+		}
+
+		&-item-content {
+			text-align: center;
+			max-width: 100%;
+			padding: 15px;
+			transition: all 0.3s ease;
+			border: 2px solid #f70833;
+			border-radius: 20px;
+			padding: 10px;
+			margin-bottom: 15px;
+			background-color: #f708341f;
+			h3 {
+				margin: 0 0 10px 0;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+
+				li {
+					margin: 5px 0;
+				}
+			}
+
+			.loayalty-title {
 				opacity: 0.5;
 				color: #f70833;
 				margin-top: 0;
@@ -331,6 +396,12 @@ body {
 				}
 			}
 		}
+
+		.loayalty {
+			&-item-content {
+				height: 80%;
+			}
+		}
 	}
 }
 @media (max-width: 768px) {
@@ -352,6 +423,164 @@ body {
 
 					h3 {
 						font-size: 15px;
+					}
+				}
+			}
+			.faq {
+				&-title {
+					margin-bottom: 10px;
+					padding: 20px;
+					color: #fff;
+					border-radius: 10px;
+					font-size: 18px;
+					font-weight: 700;
+					text-align: center;
+				}
+				.accordion {
+					.accordion-item {
+						.accordion-header {
+							background-color: #1e301e;
+
+							padding: 15px;
+							cursor: pointer;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							transition: background-color 0.3s ease;
+							border-bottom: 2px solid #f708346a;
+
+							&:hover {
+								background-color: #f708341f;
+							}
+
+							h3 {
+								font-size: 15px;
+								margin: 0;
+								color: #fff;
+								font-weight: 700;
+							}
+
+							.accordion-arrow {
+								width: 10px;
+								height: 10px;
+								border-left: 2px solid #fff;
+								border-bottom: 2px solid #fff;
+								transform: rotate(135deg);
+								transition: transform 0.3s ease;
+							}
+						}
+
+						.accordion-content {
+							max-height: 0;
+							overflow: hidden;
+							transition: max-height 0.3s ease, padding 0.3s ease;
+							padding: 0 10px;
+							background-color: #1e301e;
+
+							p {
+								margin: 0;
+								color: #fff;
+								font-weight: 700;
+								font-size: 13px;
+							}
+						}
+
+						&.active {
+							.accordion-header {
+								.accordion-arrow {
+									transform: rotate(
+										315deg
+									); // Стрелка смотрит вниз при открытии
+								}
+							}
+
+							.accordion-content {
+								max-height: 100px;
+								padding: 15px;
+							}
+						}
+					}
+				}
+			}
+
+			.available {
+				&-title {
+					font-size: 18px;
+				}
+
+				&-item {
+					flex: 1 1 48%;
+
+					.available-title {
+						padding-bottom: 5px;
+						font-size: 15px;
+					}
+				}
+
+				.available-items {
+					gap: 10px;
+					padding: 10px;
+				}
+
+				&-item-content {
+					max-width: 100%;
+					padding: 15px;
+					padding: 10px;
+					margin-bottom: 0;
+					h3 {
+						margin: 0 0 10px 0;
+						font-size: 14px;
+					}
+
+					ul {
+						list-style: none;
+						padding: 0;
+
+						li {
+							margin: 5px 0;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			.loayalty {
+				&-title {
+					font-size: 18px;
+				}
+
+				&-item {
+					flex: 1 1 100%;
+
+					.loayalty-title {
+						padding-bottom: 5px;
+						font-size: 15px;
+					}
+				}
+
+				.loayalty-items {
+					gap: 10px;
+					padding: 10px;
+				}
+
+				&-item-content {
+					max-width: 100%;
+					padding: 15px;
+					padding: 10px;
+					margin-bottom: 0;
+					h3 {
+						margin: 0 0 10px 0;
+						font-size: 14px;
+					}
+
+					ul {
+						list-style: none;
+						padding: 0;
+
+						li {
+							margin: 5px 0;
+							font-size: 14px;
+						}
 					}
 				}
 			}
